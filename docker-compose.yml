@@ -1,0 +1,16 @@
+services:
+ lamp:
+  build: ./
+  container_name: lamp1
+  restart: always
+  ports:
+   - 80:80
+  volumes:
+   - ./html:/var/www/html
+   - ./apache2-logs:/var/log/apache2
+   - ./sites-available:/etc/apache2/sites-available
+  command: "tail -f /dev/null"
+volumes:
+ html:
+ apache2-logs:
+ sites-available:

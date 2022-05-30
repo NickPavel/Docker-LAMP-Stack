@@ -1,0 +1,9 @@
+[Unit]
+Description=Start docker lamp container.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/nick/LAMP/start_lamp.sh
+
+[Install]
+WantedBy=multi-user.target
